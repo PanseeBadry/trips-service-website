@@ -1,0 +1,125 @@
+.custom-shadow{
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6) ;
+   
+}
+.custom-text-color .navbar-brand,
+.custom-text-color .nav-link {
+    color: black; /* Your desired text color */
+}
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-nav .nav-link {
+    display: inline-block;
+    position: relative;
+    
+}
+
+/* Line styling */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:var(--primary) !important; /* Line color */
+    transition: width 0.3s; /* Transition effect */
+}
+
+/* Line animation on hover */
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Expand the line to 100% */
+}
+
+
+
+/* Change the text color on hover */
+.custom-text-color .nav-link:hover {
+    color: rgb(31, 26, 26); /* Your desired hover text color */
+}
+
+.zoom-image{
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    transition: transform 0.5s ease; /* Smooth transition for the zoom effect */
+}
+.image-container:hover .zoom-image {
+    transform: scale(1.2); /* Scale the image up on hover */
+}
+.overlay-card {
+    position: relative;
+    overflow: hidden; /* Ensure the overlay doesn't exceed card boundaries */
+    transition: transform 0.3s ease; /* Smooth transition for the move effect */
+}
+
+.overlay-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Grey overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+.overlay-card:hover::after {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.hover-card {
+    transition: transform 0.3s ease; /* Smooth transition for the move effect */
+}
+
+/* Move the card up on hover */
+.hover-card:hover {
+    transform: translateY(-10px); /* Move the card up by 10 pixels */
+}
+
+.discount-label {
+    z-index: 10;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+}
+.location-label {
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+}
+.image-container {
+    position: relative;
+    overflow: hidden;
+    /* height: 100%; */
+}
+.image-container img {
+    width: 100%;
+   height: auto;
+   
+}
+.form-control , .form-select{
+    height: 50px;
+}
+.booking{
+    background-image: url(/images/ocean-3605547_1280.jpg);
+}
+
+.icon-process{
+    position: absolute;
+    top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    
+}
+
+.button-place{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 4px;
+    margin-right: 5px;
+}
